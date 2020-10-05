@@ -13,15 +13,17 @@
 {{ super() }}
 <script src="{{ static_url('extra-assets/js/login.js') }}"></script>
 {% endblock %}
+
 {% block main %}
-<div class="container" id="home" data-authenticator-login-url="{{authenticator_login_url}}"">
+<div class="container" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
   <div class="text-center">
-    <a href="https://utoronto.2i2c.cloud/">
-      <img src="{{static_url("extra-assets/images/home-hero.png") }}" alt='University of Toronto logo' class='ut-logo'
-        title='ut logo' />
+    <p class="hub-login-text">The 2i2c JupyterHub for {{ hub['org_name'] }}</p><br />
+    <a href="{{ hub['org_url'] }}">
+      <img src="{{ hub['org_logo'] }}" alt="{{ hub['org_name'] }} logo" class='hub-logo'
+        title='hub logo' />
     </a>
   <div id="operated-by">
-    Operated by <a href="https://2i2c.org/">2i2c.org</a>
+    Operated by <a href="https://2i2c.org/">2i2c.org</a> as part of the <a href="https://2i2c.org/pilot">2i2c Hubs for All pilot</a>.
   </div>
   </div>
   <div class="login-container text-center">
@@ -44,9 +46,9 @@
         </label>
       </div>
     </form>
-    <a role="button" 
+    <a role="button"
        id="login-button"
-       class='btn btn-jupyter btn-lg' 
+       class='btn btn-jupyter btn-lg'
        href='{{authenticator_login_url}}'>
         Log in to start
     </a>
