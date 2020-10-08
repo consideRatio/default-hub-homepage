@@ -17,13 +17,13 @@
 {% block main %}
 <div class="container" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
   <div class="text-center">
-    <p class="hub-login-text">The 2i2c JupyterHub for {{ hub['org_name'] }}</p><br />
+    <p class="hub-login-text">The 2i2c JupyterHub for <a href="{{ hub['org_url'] }}">{{ hub['org_name'] }}</a></p><br />
     <a href="{{ hub['org_url'] }}">
       <img src="{{ hub['org_logo'] }}" alt="{{ hub['org_name'] }} logo" class='hub-logo'
         title='hub logo' />
     </a>
   <div id="operated-by">
-    Operated by <a href="https://2i2c.org/">2i2c.org</a> as part of the <a href="https://2i2c.org/pilot">2i2c Hubs for All pilot</a>.
+    Operated by <a href="https://2i2c.org/">2i2c.org</a> and <a href="https://www.cloudbank.org/">CloudBank</a> as part of the <a href="https://2i2c.org/pilot">2i2c Hubs for All pilot</a>.
   </div>
   </div>
   <div class="login-container text-center">
@@ -58,15 +58,12 @@
   <div class="col-md-8 col-md-offset-2 details">
     <div class="col-md-6">
       <big class="details-welcome lead">
-      Welcome to the new University of Toronto <strong>JupyterHub for Teaching</strong> site.
+      Welcome to the <a href="{{ hub['org_url'] }}">{{ hub['org_name'] }}</a> <strong>2i2c JupyterHub</strong>.
       </big>
       <br />
       <br />
-      A proof of concept service, developed as a partnership between
-      the <a href="https://cio.utoronto.ca/">Office of the CIO</a> (Information
-      Technology Services), the Faculty of Arts & Science’s new Computational
-      and Data Science Education initiative, the <a href="https://2i2c.org">2i2c
-      Consortium</a>, and Microsoft Canada.
+      This is a pilot service running on open source infrastructure, deployed
+      in partnership by <a href="https://www.cloudbank.org/">CloudBank</a>, <a href="https://data.berkeley.edu/dsep">UC Berkeley Data Science Education Program</a>, and <a href="https://2i2c.org/">2i2c.org</a>. See <a href="https://2i2c.org/pilot">the 2i2c Pilot documentation</a> for usage and deployment information.</p>
     </div>
     <div class="col-md-6 details-logos">
       <div class="pull-right">
@@ -84,6 +81,11 @@
   </div>
 
   <div class="col-md-8 col-md-offset-2 questions">
+    <div>
+      <h4>Where can I learn more?</h4>
+
+      The <a href="https://2i2c.org/pilot">2i2c Pilot Hubs Documentation</a> has all of the information that you need to use the hub, as well as information about the deployment technology.
+    </div>
     <div>
       <h4>What is a Jupyter Notebook?</h4>
 
@@ -108,75 +110,18 @@
     <div>
       <h4>Who can use this service?</h4>
 
-      This JupyterHub service is open to UofT instructors and students; as this
+      This JupyterHub service is open to anyone that a hub administrator has approved.
+      Generally this means instructors and students. As this
       is a proof-of-concept service, students should ensure they are backing up
       their notebooks regularly if they are using this service for course
       activities.
     </div>
 
-    <div>
-      <h4>How do I distribute course content to students?</h4>
-      We recommend using <a href="https://jupyterhub.github.io/nbgitpuller/">nbgitpuller</a>
-      to distribute content to students. You can construct a
-      <a href="https://jupyterhub.github.io/nbgitpuller/link">nbgitpuller</a> link,
-      and send it to your students. When they click it, the course content will
-      be pulled into their home directories, and the appropriate file will be opened.
-    </div>
-
-    <div>
-      <h4>Can I run RStudio?</h4>
-      Yes you can! It is installed and enabled by default.
-
-      You can also
-      run <a href="https://github.com/jupyterlab/jupyterlab/">JupyterLab</a>,
-      or even a <a href="https://github.com/yuvipanda/jupyter-desktop-server/">Linux
-      Desktop on your browser</a>
-    </div>
-
-    <div>
-      <h4>What packages &amp; libraries are available?</h4>
-      This JupyterHub comes with Python 3.8 and R 4.0 installed. Many commonly
-      used packages are pre-installed. This <code><a href="https://github.com/utoronto-2i2c/jupyterhub-deploy/blob/prod/deployments/utoronto/image/environment.yml">environment.yml</a></code> file
-      lists the python packages installed, while this <code><a href="https://github.com/utoronto-2i2c/jupyterhub-deploy/blob/prod/deployments/utoronto/image/install.R">
-      install.R</a></code> file lists the R packages installed.
-    </div>
-
-    <div>
-      <h4>Can I install my own packages?</h4>
-      Yes, you can! In a Jupyter Notebook, you can use <code>%pip install
-      package-name</code> or <code>%conda install package-name</code> to install
-      a Python package. With R, you can use <code>install.packages()</code>.
-
-      To prevent individual user environments diverging from each other too
-      much, your user installed packages <strong>only last the length of your
-      server</strong>. So we recommend putting those package installation lines
-      in the beginning of the notebook / file that you are using, so it can be
-      run each time as necessary.
-    </div>
-
-    <div>
-      <h4>Can a package be installed for all my students?</h4>
-
-      Most likely! Please open a <a href="https://github.com/utoronto-2i2c/jupyterhub-deploy/issues">GitHub Issue</a>
-      with your request. Even better, make a pull request with changes to the
-      <code><a href="https://github.com/utoronto-2i2c/jupyterhub-deploy/blob/staging/deployments/utoronto/image/environment.yml">environment.yml</a></code>
-      file (for Python packages) and
-      <code><a href="https://github.com/utoronto-2i2c/jupyterhub-deploy/blob/staging/deployments/utoronto/image/install.R">install.R</a></code>
-      file for R packages.
-    </div>
-
-    <div>
-      <h4>I have many other questions!</h4>
-      Awesome! Please <a href="https://github.com/utoronto-2i2c/jupyterhub-deploy/issues">open an issues</a>
-      an we will help answer them!
-    </div>
-
-
   <div class="footer">
     <p>
       This service is run transparently from
-      <a href="https://github.com/utoronto-2i2c/jupyterhub-deploy">
-        github.com/utoronto-2i2c/jupyterhub-deploy
+      <a href="https://github.com/2i2c-org/pilot-hubs">
+        github.com/2i2c-org/pilot-hubs
       </a>
     </p>
     <p>
