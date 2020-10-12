@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block main %}
-<div class="container" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
+<div class="container login-header" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
   <div class="text-center">
     <p class="hub-login-text">The 2i2c JupyterHub for <a href="{{ hub['org_url'] }}">{{ hub['org_name'] }}</a></p><br />
     <a href="{{ hub['org_url'] }}">
@@ -23,7 +23,7 @@
         title='hub logo' />
     </a>
   <div id="operated-by">
-    Operated by <a href="https://2i2c.org/">2i2c.org</a> and <a href="https://www.cloudbank.org/">CloudBank</a> as part of the <a href="https://2i2c.org/pilot">2i2c Hubs for All pilot</a>.
+    Operated by: <a href="{{ hub['operated_by']['url'] }}">{{ hub['operated_by']['name'] }}</a> | Funded by: <a href="{{ hub['funded_by']['url'] }}">{{ hub['funded_by']['name'] }}</a> | Designed by: <a href="{{ hub['designed_by']['url'] }}">{{ hub['designed_by']['name'] }}</a>
   </div>
   </div>
   <div class="login-container text-center">
@@ -62,8 +62,8 @@
       </big>
       <br />
       <br />
-      This is a pilot service running on open source infrastructure, deployed
-      in partnership by <a href="https://www.cloudbank.org/">CloudBank</a>, <a href="https://data.berkeley.edu/dsep">UC Berkeley Data Science Education Program</a>, and <a href="https://2i2c.org/">2i2c.org</a>. See <a href="https://2i2c.org/pilot">the 2i2c Pilot documentation</a> for usage and deployment information.</p>
+      This is a pilot service running on open source infrastructure.
+      See <a href="https://2i2c.org/pilot">the 2i2c Pilot documentation</a> for usage and deployment information.</p>
     </div>
     <div class="col-md-6 details-logos">
       <div class="pull-right">
