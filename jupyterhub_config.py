@@ -16,10 +16,12 @@ c.Authenticator.admin_users = [
 ]
 
 c.JupyterHub.template_vars = {
-    'hub': {
-        'org_name': 'University of Foo',
-        'org_logo': 'https://jupyter.org/assets/nav_logo.svg',
-        'org_url': 'https://jupyter.org',
+    'custom': {
+        'org': {
+            'name': 'University of Foo',
+            'logo_url': 'https://jupyter.org/assets/nav_logo.svg',
+            'url': 'https://jupyter.org',
+        },
         'operated_by': {
             'name': 'Operating Org',
             'url': 'https://2i2c.org'
