@@ -56,3 +56,11 @@
     color: darkgrey;
     text-decoration: underline;
 }
+
+p.hub-login-text {
+    font-size: 1.5em;
+}
+
+div.login-header img.hub-logo {
+    width: 40%;
+}
