@@ -17,13 +17,15 @@
 {% block main %}
 <div class="container login-header" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
   <div class="text-center">
-    <p class="hub-login-text">The 2i2c JupyterHub for <a href="{{ hub['org_url'] }}">{{ hub['org_name'] }}</a></p><br />
-    <a href="{{ hub['org_url'] }}">
-      <img src="{{ hub['org_logo'] }}" alt="{{ hub['org_name'] }} logo" class='hub-logo'
+    <p class="hub-login-text">The 2i2c JupyterHub for <a href="{{ custom.org.url }}">{{ custom.org.name }}</a></p><br />
+    <a href="{{ custom.org.url }}">
+      <img src="{{ custom.org.logo_url }}" alt="{{ custom.org.name }} logo" class='hub-logo'
         title='hub logo' />
     </a>
   <div id="operated-by">
-    Operated by: <a href="{{ hub['operated_by']['url'] }}">{{ hub['operated_by']['name'] }}</a> | Funded by: <a href="{{ hub['funded_by']['url'] }}">{{ hub['funded_by']['name'] }}</a> | Designed by: <a href="{{ hub['designed_by']['url'] }}">{{ hub['designed_by']['name'] }}</a>
+      Operated by: <a href="{{ custom.operated_by.url }}">{{ custom.operated_by.name }}</a> |
+      Funded by: <a href="{{ custom.funded_by.url }}">{{ custom.funded_by.name }}</a> |
+      Designed by: <a href="{{ custom.designed_by.url }}">{{ custom.designed_by.name }}</a>
   </div>
   </div>
   <div class="login-container text-center">
@@ -58,7 +60,7 @@
   <div class="col-md-8 col-md-offset-2 details">
     <div class="col-md-6">
       <big class="details-welcome lead">
-      Welcome to the <a href="{{ hub['org_url'] }}">{{ hub['org_name'] }}</a> <strong>2i2c JupyterHub</strong>.
+      Welcome to the <a href="{{ custom.org.url }}">{{ custom.org.name }}</a> <strong>2i2c JupyterHub</strong>.
       </big>
       <br />
       <br />
