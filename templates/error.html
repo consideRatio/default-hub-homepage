@@ -1,0 +1,27 @@
+{% extends "templates/error.html" %}
+
+{% block error_detail %}
+{% if status_code == 403 %}
+<style>
+	.info {
+  		color: #fc8703;
+  		background-color: #f2f2f3;
+		
+		max-width: 640px;
+		padding: 30px;
+		margin: 0 auto;
+		overflow: hidden;
+		font-size: 17px;
+	}
+</style>
+<div class="error">
+	<div class="info">
+		<i class="fa fa-info-circle"></i>
+	  	If your email address has <b>NOT</b> been added to the list of allowed users for this hub, please <b>contact</b> the hub administrators.
+	</div>
+</div>
+{% else %}
+{{ super() }}
+{% endif %}
+
+{% endblock error_detail %}
