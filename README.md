@@ -51,7 +51,7 @@ You can run a local JupyterHub to test your login template changes.
 2. Push the local `staging` branch to the remote repository:
 
    ```bash
-   git push upstream staging
+   git push <remote> staging
    ```
 3. It should take around 5min to see your changes on the staging hub at `https://staging.pilot.2i2c.cloud`.
 
@@ -61,5 +61,5 @@ will be deployed to the other hubs too after around 5min.
 5. Delete the remote staging branch, either from the GitHub GUI, or using:
 
    ```bash
-   git branch -D staging
+   git branch git push -d <remote> staging
    ```
