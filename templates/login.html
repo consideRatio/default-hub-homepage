@@ -60,7 +60,7 @@
   <div class="info text-center">
     <br>
     <i class="fa fa-info-circle"></i>
-      Use <a href="https://uoft.me/jupyterhelp">﻿JupyterHelp</a> to open tickets for support questions.
+      Use <a href=" {{ custom.support_service.url }}">{{ custom.support_service_name }}</a> to open tickets for support questions.
   </div>
 
   <div class="col-md-8 col-md-offset-2 details">
@@ -90,10 +90,9 @@
 
   <div class="col-md-8 col-md-offset-2 announcements">
     <div>
-      <h4>* NEW * Jupyter Support Website</h4>
+      <h4>{{ custom.announcement.header }}</h4>
 
-      We have started a JupyterHub support website with documentation and tip sheets, and we will be adding more on an
-      ongoing basis. To reach the support site, please visit: <a href="https://act.utoronto.ca/jupyterhub-support">https://act.utoronto.ca/jupyterhub-support/</a>.
+      {{ custom.announcement.text }}
     </div>
   </div>
 
