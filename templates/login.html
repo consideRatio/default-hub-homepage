@@ -83,11 +83,11 @@
   </div>
 
   <div class="col-md-8 col-md-offset-2 announcements" >
-    {% for announcement in custom.announcements %}
-      <div class="col-md-6 announcement-details">
+    <div class="col-md-6">
+      {% for announcement in custom.announcements %}
         {{ announcement | safe }}
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 
 
