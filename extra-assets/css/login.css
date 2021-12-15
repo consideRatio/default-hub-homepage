@@ -47,6 +47,10 @@
     border: 2px dotted orange;
 }
 
+.announcements-text {
+    padding-left: 5px;
+}
+
 .questions {
     margin-top: 12px;
 }
