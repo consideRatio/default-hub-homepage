@@ -82,14 +82,13 @@
 
   </div>
 
-  <div class="col-md-8 col-md-offset-2 announcements" >
-    <div class="col-md-6">
-      {% for announcement in custom.announcements %}
-        {{ announcement | safe }}
-      {% endfor %}
+  {% for announcement in custom.announcements %}
+    <div class="col-md-8 col-md-offset-2 announcements" >
+      <div class="col-md-6">
+          {{ announcement | safe }}
+      </div>
     </div>
-  </div>
-
+  {% endfor %}
 
   <div class="col-md-8 col-md-offset-2 questions">
     <div>
