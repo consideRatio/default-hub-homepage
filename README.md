@@ -63,3 +63,7 @@ will be deployed to the other hubs too after around 5min.
    ```bash
    git branch git push -d <remote> staging
    ```
+
+**NOTE**
+
+Note that creating a branch in this repository with a name that matches the name of a hub in the [2i2c hubs repository](https://github.com/2i2c-org/infrastructure/tree/HEAD/config/clusters), then the changes in this branch will be reflected on that hub. This can be used either for testing (if this branch gets deleted once the changes have been merged into the main branch), or for having specific hompage customizations per hub.
