@@ -82,6 +82,16 @@
 
   </div>
 
+  {% if custom.announcements is defined %}
+    <div class="col-md-8 col-md-offset-2 announcements" >
+      {% for announcement in custom.announcements %}
+      <div class="announcements-text">
+        {{ announcement | safe }}
+      </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
   <div class="col-md-8 col-md-offset-2 questions">
     <div>
       <h4>Where can I learn more?</h4>

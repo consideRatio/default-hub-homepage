@@ -6,7 +6,9 @@ Any changes made in this repository will be reflected in the JupyterHub within 5
 
 ## Local development
 
-You can run a local JupyterHub to test your template changes.
+### Test login template changes
+
+You can run a local JupyterHub to test your login template changes.
 
 
 1. Setup a virtual python environment and ensure you have NPM installed.
@@ -37,3 +39,27 @@ You can run a local JupyterHub to test your template changes.
 
 8. If you change templates, you need to restart JupyterHub to see changes.
    But for asset changes (JS, CSS, etc) you don't need a restart
+
+### Test other template changes
+
+1. From the local branch where you have your changes commited, create a new branch called `staging`:
+
+   ```bash
+   git checkout -b staging
+   ```
+
+2. Push the local `staging` branch to the remote repository:
+
+   ```bash
+   git push <remote> staging
+   ```
+3. It should take around 5min to see your changes on the staging hub at `https://staging.pilot.2i2c.cloud`.
+
+4. After you've checked that everything works, merge the `staging` branch into master and the changes
+will be deployed to the other hubs too after around 5min.
+
+5. Delete the remote staging branch, either from the GitHub GUI, or using:
+
+   ```bash
+   git branch git push -d <remote> staging
+   ```
