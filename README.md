@@ -42,7 +42,7 @@ You can run a local JupyterHub to test your login template changes.
 
 ### 2. Test other template changes
 
-If you create a branch in this repository with a name that matches `<cluster-name>`-`<hub-name>`in the [2i2c hubs repository](https://github.com/2i2c-org/infrastructure/tree/HEAD/config/clusters), then the changes in this branch will be reflected on that cluster and hub. This can be used either for testing (if this branch gets deleted once the changes have been merged into the main branch), or for having specific hompage customizations per hub.
+If you create a branch in this repository with a name that matches `<cluster-name>`-`<hub-name>`in the [2i2c hubs repository](https://github.com/2i2c-org/infrastructure/tree/HEAD/config/clusters), then the changes in this branch will be reflected on that cluster and hub. This can be used either for testing (if this branch gets deleted once the changes have been merged into the main branch), or for having specific homepage customizations per hub.
 
 **Steps for testing changes on staging:**
 
