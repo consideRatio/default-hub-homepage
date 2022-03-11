@@ -17,7 +17,7 @@ c.Authenticator.admin_users = [
 
 c.JupyterHub.template_vars = {
     'custom': {
-        "homepage": {"interface_selector": True},
+        "interface_selector": True,
         'org': {
             'name': 'University of Foo',
             'logo_url': 'https://jupyter.org/assets/nav_logo.svg',
