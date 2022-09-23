@@ -18,7 +18,8 @@ $(function() {
     redirectIfNeeded();
     // if next query param is presentm just do nothing
     const nextPresent = new URL(document.location).searchParams.get('next');
-    if (!nextPresent) {
+    // /hub/ being next should be treated same as no next present
+    if (!nextPresent || nextPresent === "/hub/") {
         setInterface($("input[name='interface']:checked").val());
 
         $("input[name='interface']").change(function() {
