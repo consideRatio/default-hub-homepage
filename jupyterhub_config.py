@@ -1,3 +1,8 @@
+"""
+jupyterhub_config purely used for testing changes to templates.
+
+See README.md for information on how to test this out.
+"""
 import pathlib
 from oauthenticator.generic import GenericOAuthenticator
 from jupyterhub.spawner import SimpleLocalProcessSpawner
@@ -18,6 +23,7 @@ c.Authenticator.admin_users = [
 c.JupyterHub.template_vars = {
     'custom': {
         "interface_selector": True,
+        "default_url": "/rstudio",
         'org': {
             'name': 'University of Foo',
             'logo_url': 'https://jupyter.org/assets/nav_logo.svg',

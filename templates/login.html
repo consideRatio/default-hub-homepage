@@ -34,13 +34,25 @@
       <div class="form-group interface-selector">
         <label>After logging in, open: </label>
         <label class="radio-inline">
-          <input type="radio" name="interface" value="tree" checked>Jupyter Notebook
+          <input type="radio" name="interface" value="tree"
+                 {% if "default_url" not in custom or custom["default_url"] == "/tree" %}
+                 checked
+                 {% endif %}
+                 >Jupyter Notebook
         </label>
         <label class="radio-inline">
-          <input type="radio" name="interface" value="rstudio">RStudio
+          <input type="radio" name="interface" value="rstudio"
+                 {% if "default_url" in custom and custom["default_url"] == "/rstudio" %}
+                 checked
+                 {% endif %}
+                 >RStudio
         </label>
         <label class="radio-inline">
-          <input type="radio" name="interface" value="lab">JupyterLab
+          <input type="radio" name="interface" value="lab"
+                 {% if "default_url" in custom and custom["default_url"] == "/lab" %}
+                 checked
+                 {% endif %}
+                 >JupyterLab
         </label>
       </div>
     </form>
