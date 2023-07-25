@@ -17,15 +17,15 @@
 {% block main %}
 <div class="container login-header" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
   <div class="text-center">
-    <p class="hub-login-text">The 2i2c JupyterHub for <a href="{{ custom.org.url }}">{{ custom.org.name }}</a></p><br />
+    <p class="hub-login-text">2i2c JupyterHub para <a href="{{ custom.org.url }}">{{ custom.org.name }}</a></p><br />
     <a href="{{ custom.org.url }}">
       <img src="{{ custom.org.logo_url }}" alt="{{ custom.org.name }} logo" class='hub-logo'
         title='hub logo' />
     </a>
   <div id="operated-by">
-      Operated by: <a href="{{ custom.operated_by.url }}">{{ custom.operated_by.name }}</a> |
-      Funded by: <a href="{{ custom.funded_by.url }}">{{ custom.funded_by.name }}</a> |
-      Designed by: <a href="{{ custom.designed_by.url }}">{{ custom.designed_by.name }}</a>
+      Operación: <a href="{{ custom.operated_by.url }}">{{ custom.operated_by.name }}</a> |
+      Financiamiento: <a href="{{ custom.funded_by.url }}">{{ custom.funded_by.name }}</a> |
+      Diseño: <a href="{{ custom.designed_by.url }}">{{ custom.designed_by.name }}</a>
   </div>
   </div>
   <div class="login-container text-center">
@@ -57,11 +57,11 @@
       </div>
     </form>
     <a role="button" id="login-button" class='btn btn-jupyter btn-lg' href='{{authenticator_login_url}}'>
-      Log in to start
+      Log in para comenzar
     </a>
     {% else %}
     <a role="button" class='btn btn-jupyter btn-lg' href='{{authenticator_login_url}}'>
-      Log in to continue
+      Log in para continuar
     </a>
     {% endif %}
   </div>
@@ -69,12 +69,12 @@
   <div class="col-md-8 col-md-offset-2 details">
     <div class="col-md-6">
       <big class="details-welcome lead">
-      Welcome to the <a href="{{ custom.org.url }}">{{ custom.org.name }}</a> <strong>2i2c JupyterHub</strong>.
+      Bienvenido al <strong>JupyterHub-2i2c</strong> de <a href="{{ custom.org.url }}">{{ custom.org.name }}</a>
       </big>
       <br />
       <br />
-      This is a pilot service running on open source infrastructure.
-      See <a href="https://2i2c.org/pilot">the 2i2c Pilot documentation</a> for usage and deployment information.</p>
+      Este servicio corre sobre infraestructura de código abierto. Para mayor información, consulte
+      la <a href="https://2i2c.org/pilot">documentación (en inglés)</a>.
     </div>
     <div class="col-md-6 details-logos">
       <div class="pull-right">
@@ -103,55 +103,54 @@
 
   <div class="col-md-8 col-md-offset-2 questions">
     <div>
-      <h4>Where can I learn more?</h4>
-
-      The <a href="https://2i2c.org/pilot">2i2c Pilot Hubs Documentation</a> has all of the information that you need to use the hub, as well as information about the deployment technology.
+      <h4>¿Dónde puedo aprender más?</h4>
+      La <a href="https://2i2c.org/pilot">documentación de 2i2c Pilot Hubs</a> tiene toda la información que necesita para usar el hub, así como información sobre la tecnología de implementación.
     </div>
     <div>
-      <h4>What is a Jupyter Notebook?</h4>
+      <h4>¿Qué es un cuaderno Jupyter?</h4>
 
-      <a href="https://jupyter.org">Jupyter Notebook</a> is an open-source web application that allows you to create and
-      share documents that contain live code, equations, visualizations and narrative
-      text. Uses include: data cleaning and transformation, numerical simulation,
-      statistical modeling, data visualization, machine learning, and much more.
-
+      <a href="https://jupyter.org">Jupyter Notebook</a> es una aplicación web de código abierto que le permite crear y
+      compartir documentos que contienen código en vivo, ecuaciones, visualizaciones y texto
+      narrativo. Los usos incluyen: limpieza y transformación de datos, simulación numérica, 
+      modelado estadístico, visualización de datos, aprendizaje automático y mucho más.
     </div>
 
     <div>
-      <h4>What is JupyterHub?</h4>
-      <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> brings
-      the power of notebooks to groups of users. It gives users access to
-      computational environments and resources without burdening the users with
-      installation and maintenance tasks. Users - including students,
-      researchers, and data scientists - can get their work done in their own
-      workspaces on shared resources which can be managed efficiently by system
-      administrators.
+      <h4>¿Qué es JupyterHub?</h4>
+      
+      <a href="https://github.com/jupyterhub/jupyterhub">JupyterHub</a> lleva
+      el poder de los portátiles a grupos de usuarios. Brinda a los usuarios acceso a
+      entornos y recursos computacionales sin sobrecargar a los usuarios con
+      tareas de instalación y mantenimiento. Los usuarios, incluidos estudiantes, 
+      investigadores y científicos de datos, pueden realizar su trabajo en sus propios
+      espacios de trabajo en recursos compartidos que los administradores del sistema pueden
+      administrar de manera eficiente.
     </div>
 
     <div>
-      <h4>Who can use this service?</h4>
+      <h4>¿Quién puede usar este servicio?</h4>
 
-      This JupyterHub service is open to anyone that a hub administrator has approved.
-      Generally this means instructors and students. As this
-      is a proof-of-concept service, students should ensure they are backing up
-      their notebooks regularly if they are using this service for course
-      activities.
+      Este servicio de JupyterHub está abierto a cualquier persona que haya aprobado 
+      un administrador de concentrador. Generalmente esto significa instructores y estudiantes. 
+      Como se trata de un servicio de prueba de concepto, los estudiantes deben asegurarse de 
+      realizar copias de seguridad de sus portátiles con regularidad si utilizan este 
+      servicio para las actividades del curso.
     </div>
 
   <div class="footer">
     <p>
-      This service is run transparently from
-      <a href="https://github.com/2i2c-org/pilot-hubs">
-        github.com/2i2c-org/pilot-hubs
+      Este servicio se ejecuta de forma transparente desde
+      <a href="https://github.com/2i2c-org/infrastructure">
+        github.com/2i2c-org/infrastructure
       </a>
     </p>
     <p>
-      Built with
+      Construido con
       <a href="https://k8s.org">Kubernetes</a>,
       <a href="https://helm.sh">Helm</a>,
       <a href="https://docker.com">Docker</a>,
-      <a href="https://github.com/conda-forge/miniforge">Miniforge</a> and
-      many parts of the <a href="https://jupyter.org">Jupyter Project</a>
+      <a href="https://github.com/conda-forge/miniforge">Miniforge</a> y
+      muchas partes del <a href="https://jupyter.org">Jupyter Project</a>
       </p>
   </div>
 </div>
