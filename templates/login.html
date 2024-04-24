@@ -91,7 +91,7 @@
 
   </div>
 
-  {% if custom.announcements is defined %}
+  {% if custom.announcements %}
     <div class="col-md-8 col-md-offset-2 announcements" >
       {% for announcement in custom.announcements %}
       <div class="announcements-text">
@@ -102,15 +102,23 @@
   {% endif %}
 
   <div class="col-md-8 col-md-offset-2 questions">
+    {#
+      learn_more can take the following values:
+      - undefined: renders default header/content
+      - falsy: renders no header/content
+      - truthy: renders default header with specified content
+    #}
+    {% if custom.learn_more is not defined or custom.learn_more %}
     <div>
       <h4>Where can I learn more?</h4>
 
-      {% if custom.learn_more is defined %}
+      {% if custom.learn_more %}
         {{ custom.learn_more | safe }}
       {% else %}
         The <a href="https://2i2c.org/pilot">2i2c Pilot Hubs Documentation</a> has all of the information that you need to use the hub, as well as information about the deployment technology.
       {% endif %}
     </div>
+    {% endif %}
     <div>
       <h4>What is a Jupyter Notebook?</h4>
 

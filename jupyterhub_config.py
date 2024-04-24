@@ -32,15 +32,17 @@ c.JupyterHub.template_vars = {
         },
         'operated_by': {
             'name': 'Operating Org',
-            'url': 'https://2i2c.org'
+            'url': 'https://2i2c.org',
         },
         'funded_by': {
             'name': 'Funding Org',
-            'url': 'https://2i2c.org'
+            'url': 'https://2i2c.org',
         },
         'designed_by': {
             'name': '2i2c',
-            'url': 'https://2i2c.org'
-        }
+            'url': 'https://2i2c.org',
+        },
+        # 'announcements': [],
+        # 'learn_more': "..."
     }
 }
